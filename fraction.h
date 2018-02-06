@@ -17,6 +17,6 @@ fraction_t frac_div(fraction_t a, fraction_t b);
 char* frac_stringify(fraction_t a);
 float frac_solve(fraction_t f);
 
-#include "fraction.c"
+// #include "fraction.c"
 
 #endif

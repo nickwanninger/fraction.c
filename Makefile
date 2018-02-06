@@ -1,2 +1,10 @@
+CC = gcc
+FLAGS = -Wall -std=c99
+LIBS = main fraction
+
+
 default:
-	gcc -Wall -std=c99 -o main main.c
+	$(CC) $(flags) -c fraction.c
+	$(CC) $(flags) -c main.c
+	$(CC) $(flags) -o main main.o fraction.o
+	@rm -rf *.o
