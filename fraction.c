@@ -76,7 +76,7 @@ fraction_t frac_div(fraction_t a, fraction_t b) {
 }
 
 char* frac_stringify(fraction_t a) {
-	char *buffer = (char*)malloc(50 * sizeof(char));
+	char *buffer = (char*)calloc(50, sizeof(char));
 	fraction_t f;
 	f.num = a.num;
 	f.den = a.den;
