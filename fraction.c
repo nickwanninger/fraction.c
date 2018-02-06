@@ -56,7 +56,12 @@ fraction_t frac_fromfloat(float a) {
 }
 
 
-
+fraction_t frac_sub(fraction_t a, fraction_t b) {
+	fraction_t result;
+	result.num = a.num * b.den - b.num * a.den;
+	result.den = a.den * b.den;
+	return frac_simplify(result);
+}
 
 fraction_t frac_add(fraction_t a, fraction_t b) {
 	fraction_t result;
