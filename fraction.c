@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct fraction {
-	long num;
-	long den;
-} fraction_t;
-
+#include "fraction.h"
 
 fraction_t frac_simplify(fraction_t a) {
 	long x1, x2, gcd;
@@ -38,10 +33,6 @@ fraction_t frac_new(long num, long den) {
 	fraction_t f = {num, den};
 	return f;
 }
-
-
-
-
 
 
 fraction_t frac_fromfloat(float a) {
@@ -84,7 +75,7 @@ fraction_t frac_div(fraction_t a, fraction_t b) {
 	return frac_simplify(r);
 }
 
-const char* frac_stringify(fraction_t a) {
+char* frac_stringify(fraction_t a) {
 	char *buffer = (char*)malloc(50 * sizeof(char));
 	fraction_t f;
 	f.num = a.num;
